@@ -142,26 +142,27 @@ const Hero = () => {
 
           {/* Hero Video - Vertical Layout */}
           <div className="relative flex justify-center lg:justify-end lg:col-span-2">
-            <div className="bg-white rounded-3xl shadow-2xl p-6 transform hover:scale-105 transition-smooth lg:translate-x-4">
+            <div className="bg-white rounded-3xl shadow-2xl p-4 sm:p-6 transform hover:scale-105 transition-smooth lg:translate-x-4 max-w-sm w-full">
               {/* Vertical Video Container */}
               <div className="relative">
                 {/* Video Container with 9:16 aspect ratio (vertical) */}
-                <div className="w-80 rounded-2xl overflow-hidden">
+                <div className="w-full max-w-[320px] mx-auto rounded-2xl overflow-hidden">
                   <AspectRatio ratio={9/16}>
                     <iframe
                       src="https://drive.google.com/file/d/1_U_29uNF-GzNoozhxqTrCSeLu6cdTVBH/preview"
                       allow="autoplay; fullscreen; picture-in-picture"
                       allowFullScreen
                       loading="lazy"
-                      className="w-full h-full"
+                      className="w-full h-full border-0"
+                      title="Hero Video"
                     />
                   </AspectRatio>
                 </div>
-                
+
                 {/* Video Frame Decoration */}
                 <div className="absolute inset-0 border-4 border-spanish-yellow/20 rounded-2xl pointer-events-none"></div>
               </div>
-              
+
               {/* Video Info */}
               <div className="mt-4 text-center">
                 <div className="text-spanish-navy font-semibold text-sm">{t('hero.video.verticalVideo')}</div>
@@ -172,8 +173,8 @@ const Hero = () => {
             {/* Decorative Elements - Adjusted for vertical layout */}
             <div className="absolute -top-4 -right-4 w-10 h-10 bg-spanish-yellow rounded-full opacity-30"></div>
             <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-spanish-red rounded-full opacity-30"></div>
-            <div className="absolute top-1/2 -right-8 w-6 h-6 bg-spanish-navy rounded-full opacity-20"></div>
-            <div className="absolute top-1/4 -left-6 w-4 h-4 bg-spanish-yellow rounded-full opacity-25"></div>
+            <div className="absolute top-1/2 -right-8 w-6 h-6 bg-spanish-navy rounded-full opacity-20 hidden lg:block"></div>
+            <div className="absolute top-1/4 -left-6 w-4 h-4 bg-spanish-yellow rounded-full opacity-25 hidden lg:block"></div>
           </div>
         </div>
       </div>
